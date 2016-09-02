@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bubble_background"
+    android:orientation="vertical"
+    android:paddingBottom="25dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/tvBeginTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始时间：2015-01-01 00:00"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvStayTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停留时间：0分钟"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvAddressDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="20"
+        android:text="位置：中国"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        />
+
+</LinearLayout>

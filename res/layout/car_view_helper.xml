@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF" >
+
+        <Spinner
+            android:id="@+id/s_contacter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/s_contacter" >
+
+            <AutoCompleteTextView
+                android:id="@+id/et_ListSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="@string/search_hit"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/iv_ListClear"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/image_description"
+                android:padding="10dp"
+                android:src="@drawable/delete"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/image_description"
+                android:padding="10dp"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+        <com.wisegps.clzx.view.XListView
+            android:id="@+id/lv_cars"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/tv_SearchStatistic"
+            android:layout_below="@+id/rl_search"
+            android:cacheColorHint="#00000000"
+            android:divider="#EAEAEA"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@+id/tv_SearchStatistic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_address"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_Map"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/image_description"
+            android:onClick="onClick"
+            android:src="@drawable/trun_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+         android:background="#FFFFFF"
+        android:paddingBottom="50dp"
+        android:layout_gravity="start" >
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_alignParentBottom="true"
+           android:gravity="center_vertical"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="15dp" />
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

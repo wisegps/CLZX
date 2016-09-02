@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="top_bar">50dp</dimen>
+	<dimen name="qq_aio_send_btn_height">34dp</dimen> 
+	 <dimen name="aio_msg_content_distance">15dp</dimen>
+	  <dimen name="aio_msg_max_width">250dp</dimen>
+</resources>

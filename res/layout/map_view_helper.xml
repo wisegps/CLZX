@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/MapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_Me" >
+
+            <AutoCompleteTextView
+                android:id="@+id/et_MapSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="@string/search_hit"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/iv_MapClear"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/image_description"
+                android:padding="10dp"
+                android:src="@drawable/delete"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/image_description"
+                android:padding="10dp"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+         <ImageView
+            android:id="@+id/iv_Me"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/myplaces" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_Search"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/image_description"
+         android:onClick="onClick"
+        android:src="@drawable/trun_left" />
+
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_search" >
+
+        <ImageView
+            android:id="@+id/tv_set_map_type"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#bbb9bb"
+            android:padding="5dp"
+            android:onClick="onClick"
+            android:tag="default"
+			android:src="@drawable/ic_main_icon_maplayers"  />
+
+        <ImageView
+            android:id="@+id/iv_map_traffic_set"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_set_map_type"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#bbb9bb"
+            android:padding="5dp"
+            android:onClick="onClick"
+            android:tag="default"
+            android:src="@drawable/main_icon_roadcondition_off" />
+    </RelativeLayout>
+    
+    
+    
+    
+    
+    
+
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_address"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/Layout_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/background_dark"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/show_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/image_description"
+                android:tag="play"
+                android:src="@drawable/ic_play" />
+
+            <ImageView
+                android:id="@+id/iv_stop"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/ic_stop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/locas_speed" />
+
+            <SeekBar
+                android:id="@+id/sb_speed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

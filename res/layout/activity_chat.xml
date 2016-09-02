@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0eb" >
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar"
+        android:background="@drawable/ic_ic_title_bar"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLength="15"
+            android:singleLine="true"
+            android:text="我的消息"
+            android:textColor="#ffffff"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@+id/btn_msg_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/msg_remove"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/user_icon"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_group_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_group"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" >
+
+        <LinearLayout
+            android:id="@+id/inputBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_skin_aio_input_bar_bg"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="2dp"
+                android:background="#00000000"
+                android:contentDescription="选择表情面板 "
+                android:src="@drawable/ic_skin_aio_keyboard_nor" />
+
+            <EditText
+                android:id="@+id/et_msg_input"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_skin_aio_input_bg"
+                android:contentDescription="文本框  连按两次来编辑"
+                android:inputType="textMultiLine|text"
+                android:maxLines="5"
+                android:shadowColor="@color/chat_input_shadow_color"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textColor="@color/skin_input"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_send_msg"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/qq_aio_send_btn_height"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/common_background"
+                android:onClick="onClick"
+                android:text="发送"
+                android:textColor="@color/skin_aio_send_button"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip"
+        
+                 >
+
+        <LinearLayout
+            android:id="@+id/inputBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/skin_aio_input_bar_bg"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="2dp"           
+                android:src="@drawable/skin_aio_keyboard_nor" />
+            
+            
+            <EditText
+                android:id="@+id/et_msg_input"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/skin_aio_input_bg"
+                android:contentDescription="文本框  连按两次来编辑"
+                android:inputType="textMultiLine|text"
+                android:maxLines="5"
+                android:shadowColor="@color/chat_input_shadow_color"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_send_msg"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/qq_aio_send_btn_height"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/common_background"
+                android:onClick="onClick"
+                android:text="发送"
+                android:textColor="@color/skin_aio_send_button"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bar_bottom"
+        android:layout_below="@id/top_bar" >
+
+        <ProgressBar
+            android:id="@+id/pb_load_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        
+        <!-- ptr:ptrAnimationStyle="flip"  flip:翻转  rotate:旋转 -->
+        <!-- ptr:ptrShowIndicator="true"  右上角 右下角出现箭头 -->
+        <com.wisegps.clzx.view.ChatListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/lv_msg_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pb_load_more"
+            android:dividerHeight="0dp"
+            android:divider="#00000000"
+            ptr:ptrAnimationStyle="rotate"
+            ptr:ptrHeaderTextColor="@android:color/background_dark"
+            ptr:ptrDrawable="@drawable/default_ptr_rotate"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

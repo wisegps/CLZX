@@ -1,0 +1,55 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout 
+    	android:background="#ffffff"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+        <RelativeLayout 
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1">        
+		    <ImageView 
+		        android:id="@+id/iv_satellite"
+		        android:layout_centerHorizontal="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bd_wallet_blue_color_bg_selector"
+		        android:src="@drawable/ic_main_map_mode_satellite_normal"/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@id/iv_satellite"
+		        android:layout_marginTop="5dp"
+		        android:text="@string/Satellite"/>
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1">        
+		    <ImageView 
+		        android:id="@+id/iv_plain"
+		        android:layout_centerHorizontal="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bd_wallet_blue_color_bg_selector"
+		        android:src="@drawable/ic_main_map_mode_plain_normal"/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@id/iv_plain"
+		        android:layout_marginTop="5dp"
+		        android:text="@string/Traffic"/>
+	    </RelativeLayout>
+	    
+    </LinearLayout>    
+</LinearLayout>

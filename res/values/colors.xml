@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="chat_input_shadow_color">#C8C9CA</color>
+    <color name="common_normal">#1bb3cf</color>
+    <color name="common_pressed">#106576</color>
+    <color name="bd_wallet_item_bg_blue">#ff37a6fb</color>
+	<color name="bd_wallet_item_bg_blue_hover">#ff5fb2f9</color>
+
+</resources>
